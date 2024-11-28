@@ -1,0 +1,4256 @@
+<html data-dpr="1" style="font-size: 56px;">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <link rel="stylesheet" href="/index_files/hotlist.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+    <title>	{$site.lqztitle}</title>
+    <meta name="description" content="	{$site.lqzdescription}">
+    <meta name="copyright" content="B3log">
+    <meta http-equiv="Window-target" content="_top">
+    <link rel="stylesheet" href="/index_files/mobile-base.css">
+    <link rel="icon" type="image/png" href="/">
+    <link rel="apple-touch-icon" href="/images/faviconH.png">
+
+    <style>
+        .module table{width: 100% !important}
+        .nav,
+        .cgi-head,
+        .cgi-gsb ul li span.cgi-gsb-xye,
+            /*.u-title-box .u-title,*/
+        .u-pin-top,
+        .u-pin-bot,
+        .u-badge,
+        .layui-m-layerbtn span[yes],
+        .m-tj-wrap h4 {
+            background-color: #09c060 !important;
+        }
+
+        .index .module-header h2 {
+            border-top: 1px solid #09c060 !important;
+            border-bottom: 1px solid #09c060 !important;
+        }
+
+        .index .module-header span svg,
+        .layui-m-layerchild h3 {
+            color: #09c060 !important;
+        }
+
+        button.green, .btn.green {
+            background-color: #09c060 !important;
+            border-color: #09c060 !important;
+        }
+
+        .u-title-box {
+            border: 1px solid #09c060
+        }
+
+        .u-con-border {
+            box-shadow: 0 0 3px #09c060;
+        }
+    </style>
+    <link rel="stylesheet" href="/index_files/theme-color.css">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="blank">
+    <script>
+        if (('standalone' in window.navigator) && window.navigator.standalone) {
+            var noddy, remotes = false;
+            document.addEventListener('click', function (event) {
+                noddy = event.target;
+                while (noddy.nodeName !== 'A' && noddy.nodeName !== 'HTML') noddy = noddy.parentNode;
+                if ('href' in noddy && noddy.href.indexOf('http') !== -1) {
+                    event.preventDefault();
+                    document.location.href = noddy.href
+                }
+            }, false)
+        }</script>
+    <link rel="stylesheet" href="/index_files/hotlist.css">
+    <style type="text/css">
+        .cgi-zl-top {
+            padding: 10px; /*box-shadow: rgba(0, 0, 0, 0.0980392) 0px 2px 5px;*/
+            border-width: 1px;
+            border-style: solid;
+            border-color: rgb(221, 221, 221);
+            border-image: initial;
+            border-radius: 5px;
+            background: rgb(255, 255, 255);
+        }
+
+        .cgi-zl-top img {
+            max-width: 100%;
+        }
+
+        .adHeader {
+            margin: 2px;
+        }
+
+        .adFooter {
+            margin: 2px;
+        }
+
+        .index .module-header h2 {
+            border-top: 1px solid #e4dece !important;
+            border-bottom: 1px solid #e4dece !important;
+            background: #09c060;
+            color: #fff;
+            text-shadow: none;
+        }
+
+        .index .module-header span {
+            font-size: 17px;
+            color: white;
+            font-weight: 600;
+            align = "center"
+        }
+
+        .m-article-con ul li {
+            border-bottom: 1px solid;
+            border-color: #09c060;
+            font-size: 17px;
+        }
+
+        .cgi-gsb ul li {
+            border-bottom: 1px solid #EAEAEA !important;
+        }
+
+        .cgi-gsb {
+            padding: 0 !important;
+        }
+
+        @charset "utf-8";
+        /*标头*/
+        .navv {
+            position: relative;
+            top: 50px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            max-width: 640px;
+            margin: 0 auto;
+            background-color: #fff;
+            height: 40px;
+            line-height: 38px;
+            border-top: 2px solid #DFE2EA;
+            border-bottom: 2px solid #DFE2EA;
+            border-radius: 5px;
+        }
+
+        #biaoti {
+            max-width: 640px;
+            margin: 0 auto;
+            height: 50px;
+            background: white;
+            z-index: 999;
+            left: 0;
+            right: 0;
+            top: 0;
+            width: 100%;
+            position: fixed;
+        }
+
+        #biaotia {
+            float: left;
+            height: 50px;
+            width: 100%;
+        }
+
+        <!-- /*红包*/
+        .decrate {
+            margin: 0px;
+            padding: 5px;
+            border: 6px solid rgb(255, 2, 2);
+            color: rgb(255, 2, 2);
+            background: rgb(255, 243, 13);
+            animation: pulse 2s ease-in-out 0s infinite normal forwards running;
+            width: 10vw;
+            height: 10vw;
+            text-align: center;
+            position: fixed;
+            bottom: 100px;
+            z-index: 100;
+            right: 10px;
+            border-radius: 50%;
+            display: block;
+        }
+
+        -->
+        /*内显文库*/
+        #wz ul li:nth-child(odd) {
+            border-right: 1px solid #DDDDDD;
+        }
+
+        #wz {
+            width: 100%;
+            height: 280px;
+        }
+
+        #wz ul li {
+            width: 50%;
+            height: 70px;
+            border-bottom: 1px solid #DDDDDD;
+            float: left;
+            box-sizing: border-box;
+            list-style: none;
+        }
+
+        #wz #wztp {
+            height: 40px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        #wz #wztp img {
+            height: 100%;
+            margin-top: 20px;
+        }
+
+        #wz #wzwz {
+            float: left;
+            margin-left: 20px;
+            text-align: center;
+        }
+
+        #wz #wzwz .wz1 {
+            margin: 0;
+            margin-top: 20px;
+            color: black;
+            font-size: 18px;
+        }
+
+        #wz #wzwz .wz2 {
+            margin: 0;
+            margin-top: 5px;
+            font-size: 12px;
+            color: #808080;
+        }
+
+        /* 固顶帖子比例盒子大小 */
+        .g-tz-r .spanFengSe,
+        .avatar-li h2 .bl {
+            padding: 3px 0 !important;
+            width: 55px !important;
+            text-align: center !important;
+        }
+
+        .cgi-gsb ul li span.cgi-zuozhe {
+            display: none !important;
+        }
+    </style>
+    <link href="/index_files/layer.css" type="text/css" rel="styleSheet" id="layermcss">
+    {$site.lqzbaidutj}
+</head>
+<body class="index" style="background:#FFFFFF;" id="TOP">
+<!--标头开始-->
+<!--标头开始-->
+<div id="biaoti">
+    <div id="biaotia">
+        <img style="height:100%;" src="{$site.lqzlogo}">
+    </div>
+</div>
+<!--标头结束-->
+<div class="fn-hr45"></div>
+<!---ID--->
+{include file="common:nav"}
+<!---ID kh end-->
+<!---滚动1-->
+<div>
+    <table style="margin:0px;width:100%;height:35px;" class="ke-zeroborder" border="0" cellspacing="1"
+           bordercolor="#006600" width="100%" align="center" height="50">
+        <tbody>
+        <tr>
+            <td style="background-image:url(/upload/2022/11/gonggao-c1910f5a.png);border:2px solid #999;">
+                <div align="center">
+                    <marquee
+                            style="filter:glow(color=red);margin-top:10;width:100%;font-family:黑体;height:30px;color:#ffff00;font-size:25pt;"
+                            onmouseover="stop()" scrollamount="5" font="" onmouseout="start()"><b><span
+                            style="font-size:large;"><span style="color:red;"><strong>
+                        {$site.gonggao2??''}
+                    </strong></span></span></b>
+                    </marquee>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!---滚动1-->
+
+<!--头部广告位start-->
+{$page['11']['content']??''}
+<!--中彩APP-->
+<style>
+    .swiper-wrapper .swiper-slide {
+        height: auto;
+    }
+
+    .swiper-wrapper {
+        height: auto
+    }
+
+    .fivetab {
+        position: relative;
+        z-index: 0;
+        color: #333;
+        background: #fff;
+    }
+
+    .fivetab ul,
+    .fivetab li {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .fivetab a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .fivetab-tit {
+        font-size: 16px;
+    }
+
+    .fivetab-tit .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        text-align: center;
+        border: solid 2px #fff;
+        box-sizing: border-box;
+        background: #eee;
+    }
+
+    .fivetab-tit .swiper-slide.active-nav {
+        color: #fff;
+        background: #f00;
+    }
+
+    .fivetab-box {
+        padding-bottom: 5px;
+        font-size: 16px;
+    }
+
+    .fivetab-box .banner-bar {
+        text-align: center;
+    }
+
+    .fivetab-box .banner-bar img {
+        width: 100%;
+        height: auto;
+    }
+
+    .fivetab .down-bar {
+        line-height: 1.75;
+        margin: 0 auto;
+        padding: 0px 0 0;
+        box-sizing: border-box;
+    }
+
+    .fivetab .down-bar-boxt {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+
+    .fivetab .down-bar-boxt-1 {
+        width: 30%;
+        min-width: 130px;
+        text-align: center;
+    }
+
+    .fivetab .down-bar-boxt-1 img {
+        width: 100px;
+        height: auto;
+        border-radius: 18px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .1);
+    }
+
+    .fivetab .down-bar-boxt-2 {
+        width: 70%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .fivetab .down-bar-boxt-2l {
+        width: 45%;
+    }
+
+    .fivetab .down-bar-boxt-2r {
+        width: 55%;
+    }
+
+    .fivetab .down-bar-boxt-2r img {
+        width: 22px;
+    }
+
+    .fivetab .down-bar-rz {
+        display: flex;
+        align-items: center;
+        margin-top: 0px;
+        color: #15bc83;
+    }
+
+    .fivetab .down-bar-rz img {
+        width: auto;
+        height: 24px;
+        margin-right: 3px;
+    }
+
+    .fivetab .down-bar-boxf {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        padding: 0 5px;
+        text-align: center;
+        color: #fff;
+    }
+
+    .fivetab .down-bar-boxf div {
+        display: flex;
+        justify-content: center;
+        width: 33.33%;
+    }
+
+    .fivetab .down-bar-boxf a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 40px;
+        line-height: 40px;
+        width: 80%;
+        color: #fff;
+        border-radius: 5px;
+        transition: all 0.2s;
+    }
+
+    .fivetab .down-bar-boxf a img {
+        width: 24px;
+        margin-right: 3px;
+    }
+
+    .fivetab .down-bar-boxf a:hover {
+        margin-top: -5px;
+    }
+
+    .fivetab .down-bar-boxf-1 a {
+        background: #c34dff;
+    }
+
+    .fivetab .down-bar-boxf-2 a {
+        background: #ff5b5b;
+    }
+
+    .fivetab .down-bar-boxf-3 a {
+        background: #3ebc40;
+    }
+
+    @media screen and (max-width: 500px) {
+        .fivetab-tit {
+            font-size: 13px;
+        }
+
+        .fivetab-tit .swiper-slide {
+            height: 30px;
+        }
+
+        .fivetab-box {
+            padding-bottom: 3px;
+            font-size: 13px;
+        }
+
+        .fivetab .down-bar {
+            padding: 0px 0 5px;
+            font-size: 13px;
+        }
+
+        .fivetab .down-bar-boxt-1 {
+            width: 20%;
+            min-width: 100px;
+            text-align: center;
+        }
+
+        .fivetab .down-bar-boxt-1 img {
+            width: 70px;
+            border-radius: 12px;
+            box-shadow: 0 3px 5px rgba(0, 0, 0, .1);
+        }
+
+        .fivetab .down-bar-boxt-2r img {
+            width: 16px;
+        }
+
+        .fivetab .down-bar-rz img {
+            height: 20px;
+            margin-right: 3px;
+        }
+
+        .fivetab .down-bar-boxf a {
+            height: 34px;
+            line-height: 34px;
+            width: 90%;
+            border-radius: 5px;
+        }
+
+        .fivetab .down-bar-boxf a img {
+            width: 24px;
+            margin-right: 3px;
+        }
+
+        .fivetab .down-bar-boxf a:hover {
+            margin-top: 0;
+        }
+
+        .fivetab .down-bar-boxf a img {
+            width: 20px;
+        }
+    }
+</style>
+<div class="fivetab">
+    <!--yc彩票开始-->
+    {notempty name="data.apps"}
+    {include file="common:ad1"}
+    {/notempty}
+</div>
+<!--广告赢彩顶部开始-->
+<div style="background-color:#09c060;margin-top:1px;padding:5px;border-radius:5px;box-shadow:0 2px 5px rgba(0,0,0,0.2);font-family:&#39;微软雅黑&#39;;font-size:10pt;color:#000;font-weight:500;border:solid 1px #C0C0C0;line-height:normal;max-width:800px;margin:0 auto;text-align:center;">
+    {$page['12']['content']??''}
+</div>
+<!--广告赢彩顶部结束-->
+<!---gundong-->
+<div>
+    <table style="margin:0px;width:100%;height:35px;" class="ke-zeroborder" border="0" cellspacing="1"
+           bordercolor="#006600" width="100%" align="center" height="50">
+        <tbody>
+        <tr>
+            <td style="background-image:url(/upload/2022/11/gonggao-c1910f5a.png);border:2px solid #999;">
+                <div align="center">
+                    <marquee
+                            style="filter:glow(color=red);margin-top:10;width:100%;font-family:黑体;height:30px;color:#ffff00;font-size:25pt;"
+                            onmouseover="stop()" scrollamount="5" font="" onmouseout="start()"><b><span
+                            style="font-size:large;"><span style="color:red;">【最新公告】<strong>
+                        {$site.gonggao}
+
+                    </strong>》</span></span></b>
+                    </marquee>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+<!---gundongjieshu-->
+<!---开奖器-->
+<div name="Hongkong" style="display: none">
+    <iframe src="https://52368.com/kj2.html?tag=xg&tt={$tt}" width="100%" marginwidth="0" height="187" scrolling="no" frameborder="0"
+            border="0"></iframe>
+</div>
+
+<div name="Aomen" style="display: none">
+    <iframe src="https://52368.com/kj2.html?tt={$tt}" width="100%" marginwidth="0" height="187" scrolling="no" frameborder="0"
+            border="0">
+    </iframe>
+</div>
+
+<!---开奖器end-->
+<!--澳门直播配置开始-->
+<div name="Aomen" style="">
+    <script>
+        var macauLiveUri, macauLiveHeight, zhiboHtml;
+        if (isDesktop()) {
+            //电脑高度百分比或像素
+            macauLiveHeight = '373px';
+            macauLiveUri = "/pc/#/live/2032";
+        } else {
+            //手机高度百分比或像素
+            macauLiveHeight = '230px';
+            macauLiveUri = "/h5/#/lotteryVideo?id=2032";
+        }
+
+        function isDesktop() {
+            var ua = navigator.userAgent;
+            var devices = ["Android", "iPhone", "SymbianOS", "Windows Phone", "iPad", "iPod"];
+            var flag = true;
+            for (var v = 0; v < devices.length; v++) {
+                if (ua.indexOf(devices[v]) > 0) {
+                    flag = false;
+                    break
+                }
+            }
+            return flag
+        }
+    </script>
+    <!--澳门直播配置结束-->
+
+    <!--澳门开奖zhibo1 start-->
+    <div>
+        <script>
+
+            eval(function (p, a, c, k, e, r) {
+                e = String;
+                if ('0'.replace(0, e) == 0) {
+                    while (c--) r[e(c)] = k[c];
+                    k = [function (e) {
+                        return r[e] || e
+                    }];
+                    e = function () {
+                        return '[1]'
+                    };
+                    c = 1
+                }
+                ;
+                while (c--) if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+                return p
+            }('document.write("<1 src=\\"https://zhibo.macaujc.mobi/live\\""+macauLiveUri+"\\" marginwidth=\\"0\\" scrolling=\\"no\\" border=\\"0\\" width=\\"100%\\" height=\\""+macauLiveHeight+"\\" id=\\"test\\" frameborder=\\"0\\" style=display:none></1>");', [], 2, '|iframe'.split('|'), 0, {}))
+
+            function showOrHideVideo(isShow) {
+                var t = document.getElementById('test');//选取id为test的元素
+                if (t) {
+                    if (isShow) {
+                        t.style.display = 'block';   // 显示元素
+                    } else {
+                        t.style.display = 'none';   // 隐藏元素
+                    }
+                }
+            }
+
+            var currentTime = new Date();
+            var startTime = new Date();
+            startTime.setHours(21);
+            startTime.setMinutes(27);
+            startTime.setSeconds(50);
+
+            var endTime = new Date();
+            endTime.setHours(21);
+            endTime.setMinutes(37);
+            endTime.setSeconds(50);
+            var intervalSec = 10000;//10秒
+
+            var id;
+            if (currentTime >= startTime && currentTime <= endTime) {
+                showOrHideVideo(true);
+                id = setInterval(monitorClose, intervalSec);
+            } else {
+                id = setInterval(monitorOpen, intervalSec);
+            }
+
+            function monitorClose() {
+                var currentTime = new Date();
+                if (currentTime > endTime) {//关闭
+                    clearInterval(id);
+                    showOrHideVideo(false);
+                }
+            }
+
+            function monitorOpen() {
+                var currentTime = new Date();
+                if (currentTime >= startTime && currentTime <= endTime) {//开启
+                    clearInterval(id);
+                    id = setInterval(monitorClose, intervalSec);
+                    showOrHideVideo(true);
+                }
+            }
+        </script>
+        <iframe src="/index_files/live.html" pc="" #="" live="" marginwidth="0" scrolling="no" border="0" width="100%" height="373px" id="test" frameborder="0"
+        style="display:none"></iframe>
+    </div>
+    <!--澳门开奖zhibo end-->
+    <div style="color:green;text-align:center;font-size:18px;font-weight:400px;line-height:40px;background-color:#fff">
+        澳门六合彩现场开奖直播<font color="red">【21:28自动展开】</font></div>
+</div>
+<!--官方开奖网开始-->
+<table style="border-collapse:collapse;color:#000;font-weight:700;border:2px solid #000;" border="2" width="100%">
+    <tbody>
+    <tr>
+        <td style="color:#000;font-family:新宋体;font-weight:700;border:2px solid #000;" bgcolor="#ffffff" width="100%"
+            height="80">
+            <p style="line-height:200%;" align="center">
+                <strong style="font-style:normal;background-color:#fff;"><span
+                        style="color:#060;font-family:方正中粗雅宋简体;font-size:large;"> 澳门官方开奖网：</span></strong><span
+                    style="font-family:微软雅黑;"><span style="color:#000;font-size:large;"><strong
+                    style="font-style:normal;background-color:#fff;"><a href="{$site.zhibodizi}" target="_blank">{$site.kjwz}</a></strong></span><span
+                    style="font-size:15pt;"><br>
+<a href="{$site.zhibodizi}" target="_blank"><img
+        src="/index_files/a9bda23819b472f3-028c566a-6aae513c-2a4fa2e5.gif"></a></span><a href="{$site.zhibodizi}"
+                                                                                       target="_blank"><span
+                    style="color:red;background-color:#ff0;font-size:15pt;" "="">【点击这里查看直播开奖】</span></a></span>
+            </p>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<!--官方开奖网结束-->
+<div class="module" id="mika1">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【一肖一码】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {volist name="data.am.yxym" id="val"}
+                        <table border="0" width="100%" bordercolor="#CCCCCC" cellpadding="0" id="table1" style="border-collapse:collapse;border-spacing:0px;color:#444444;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-indent:0px;text-transform:none;white-space:normal;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;text-align:center;font-size:10pt;background-color:#FFFFFF;" class="ke-zeroborder">
+                            <tbody>
+                            <tr height="40px">
+                                <td width="100%"
+                                    style="margin:0px;padding:3px 2px;font-size:15pt;border:1px solid #E5E5E5;word-break:break-all;"
+                                    bgcolor="#808080">
+                                    <a target="_blank" href="{$val.url}">
+                                        <span style="color:#FFFFFF;">
+                                        {$val.ad|bg=###,'#FFE500',''}
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {$val.content}
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="module" id="mika3">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩 【高手贴专区】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {$page['20']['content']??''}
+                                {volist name="data.am.gst" id="val"}
+                                <p style="text-align:left;">
+                                    <a target="_blank" href="/amgst/{$val.id}.html">
+                                        <span style="color:#000000;"><img src="/index_files/tietu-fb751412.gif" alt="">{$val.qi}期: {$val.p1}</span><span style="color:#800080;"><span
+                                            style="color:#000000;">【<span style="color:#FFE500;background-color:#FF0000;">{$val.name|bg=###,'#FF0000',''}</span>】</span><span
+                                            style="color:#000000;"> {$val.p2}</span></span></a>
+                                    <span style="float: right; font-size: 13px; color: #787878">{$val.zz}</span>
+                                <div style="clear:both;"></div>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--顶部广告位start-->
+<div style="" class="cgi-zl-top adHeader">
+    {$page['13']['content']??''}
+    <!---友情链接12组--->
+    <style>
+        .ss {
+            background: ivory;
+            text-align: center;
+        }
+
+        .ss ul {
+            padding: 5px 0;
+        }
+
+        .ss ul li a {
+            display: inline-block;
+            margin: 3px 0;
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+            font-size: 13pt;
+            line-height: 40px;
+            border: solid 1px #ddd;
+        }
+
+        .ss ul li a font {
+            text-shadow: 0 1px 0 #000;
+        }
+
+        .ss ul li a:hover {
+            background: #CCFF99;
+            color: red;
+        }
+    </style>
+    <div class="box">
+        <div class="ss">
+            <ul>
+                {volist name="data.link" id="val"}
+                <li>
+                    <a target="_blank" href="{$val.url}">
+                        <img src="/index_files/003-db7ddade-9b53c2c4.gif">
+                        <span style="color:#000000;">{$val.txt|bg=###,'#FF0000',''}</span>
+                    </a>
+                </li>
+                {/volist}
+            </ul>
+        </div>
+    </div>
+    {$page['14']['content']??''}
+</div>
+<!--顶部广告位end-->
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+<!--            精选24码-->
+            <div class="module-header">
+                <h2>
+                    <span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩  【精选24码】
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style type="text/css">
+                            .style1 {
+                                color: #006600;
+                            }
+                        </style>
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjj"}
+                                </td>
+                            </tr>
+                            {volist name="data.am.jx24m" id="val"}
+                            <tr>
+                                <td height="80" align="center" style="text-align:center;">
+                                    <span style="font-size:18px;"><span style="font-size:16px;">{$val.qi}期：开：</span><span
+                                            style="color:#FF0000;font-size:16px;">{$val.kai}</span><span
+                                            style="font-size:16px;">中</span></span>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module" id="xg_jzxh">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【精准三行】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <img src="/index_files/五行VIPPro_proc-4da9eed2-e38cd152.jpg" width="100%">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            {volist name="data.xg.jz3h" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：精中三行【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--本站域名开始1-->
+{include file="common:xwz"}
+<!--域名1end-->
+<!-- 彩种导航start-->
+<style type="text/css">
+    .nav-daohang {
+        max-width: 640px;
+        margin: 0px auto;
+        position: fixed;
+        bottom: 60px;
+        z-index: 999;
+        width: 100%;
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+    }
+
+    .nav-daohang-a {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5px;
+    }
+
+    .nav-daohang-a-b {
+        width: 24%;
+        height: 40px;
+        border-radius: 5px;
+    }
+
+    .nav-daohang-img {
+        height: 100%;
+        width: 50%;
+        float: left;
+        margin: 0 auto;
+    }
+
+    .nav-daohang-imgs {
+        width: 30px;
+        height: 30px;
+        margin-top: 5px;
+        float: right;
+    }
+
+    .nav-daohang-text {
+        height: 100%;
+        height: 50%;
+        text-align: center;
+        line-height: 40px;
+        font-size: 16px;
+    }
+</style>
+
+<div class="nav-daohang" name="Aomen" style="">
+    <div class="nav-daohang-a">
+        <a class="nav-daohang-a-b" href="#top"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.AOMEN);"
+           style="border: 1px solid #07c160;background-color:#07c160;">
+            <div class="nav-daohang-img">
+                <img class="nav-daohang-imgs" src="/index_files/aomen-43d8d988.png">
+            </div>
+            <div class="nav-daohang-text">
+                <span style="color: #FFFFFF;">澳彩</span>
+            </div>
+        </a>
+        <a class="nav-daohang-a-b" href="#top"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.HONGKONG);"
+           style="border: 1px solid #c10707;background-color:#ffffff;">
+            <div class="nav-daohang-img">
+                <img class="nav-daohang-imgs" src="/index_files/xianggang1-4bf3286e.png">
+            </div>
+            <div class="nav-daohang-text">
+                <span>港彩</span>
+            </div>
+        </a>
+        <a class="nav-daohang-a-b" target="_blank" href="{$site.gfwturl}"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.AOMEN);"
+           style="border: 1px solid #0755c1;background-color:#ffffff;">
+
+            <div class="nav-daohang-text">
+                <span style="color:red">官方网投</span>
+            </div>
+        </a>
+        <a class="nav-daohang-a-b" target="_blank" href="{$site.tm49url}"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.AOMEN);"
+           style="border: 1px solid #b907c1;background-color:#ffffff;">
+
+            <div class="nav-daohang-text">
+                <span style="color:red">特码49倍</span>
+            </div>
+        </a>
+    </div>
+</div>
+{notempty name="data.am.wcsl"}
+<div class="module" id="mika_wcsl">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【无错杀料】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {volist name="data.am.wcsl" id="val"}
+                                <p style="text-align:left;">
+                                    <a target="_blank" href="/wcsl/{$val.id}.html">
+                                        <span style="color:#000000;">&nbsp;<img src="/index_files/tietu-fb751412.gif" alt="">{$val.qi}期: 无错杀料</span>
+                                        【<span style="color:#FF0000;">{$val.name|bg=###,'#FF0000',''}</span>】<span style="color: #000">-已上料</span></a>
+                                    <span style="float: right; font-size: 13px; color: #787878">{$val.zz}</span>
+                                    <div style="clear:both;"></div>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+{notempty name="data.xg.slzq"}
+<div class="module" id="xg_slzq">
+    <div class="module-panel">
+        <div name="Hongkong" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【杀料专区】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {volist name="data.xg.slzq" id="val"}
+                                <p style="text-align:left;">
+                                    <span style="background: #00aee7; display: inline-block; line-height: 28px; padding: 0 3px; border-radius: 3px; font-size: 13px; color: #fff;">杀料贴</span>
+                                    <a target="_blank" href="/slzq/{$val.id}.html">
+                                        <span style="color:#000000;">{$val.qi}期: </span>
+                                        【<span style="color:#FF0000;">{$val.name|bg=###,'#FF0000',''}</span>】<span style="color: #000">-准准准</span></a>
+                                    <span style="float: right; font-size: 13px; color: #787878">{$val.zz}</span>
+                                <div style="clear:both;"></div>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+{notempty name="data.xg.ptzq"}
+<div class="module" id="xg_ptzq">
+    <div class="module-panel">
+        <div name="Hongkong" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【平特专区】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {volist name="data.xg.ptzq" id="val"}
+                                <p style="text-align:left;">
+                                    <a target="_blank" href="/ptzq/{$val.id}.html">
+                                        <span style="color:#000000;">&nbsp;<img src="/index_files/tietu-fb751412.gif" alt="">{$val.qi}期: 平特专区</span>
+                                        【<span style="color:#FF0000;">{$val.name|bg=###,'#FF0000',''}</span>】<span style="color: #000">-已上料</span></a>
+                                    <span style="float: right; font-size: 13px; color: #787878">{$val.zz}</span>
+                                <div style="clear:both;"></div>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+<div class="nav-daohang" name="Hongkong" style="display: none">
+    <div class="nav-daohang-a">
+        <a class="nav-daohang-a-b" href="#top"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.AOMEN);"
+           style="border: 1px solid #07c160;background-color:#ffffff;">
+            <div class="nav-daohang-img">
+                <img class="nav-daohang-imgs" src="/index_files/aomen1-dd207628.png">
+            </div>
+            <div class="nav-daohang-text">
+                <span>澳彩</span>
+            </div>
+        </a>
+        <a class="nav-daohang-a-b" href="#top"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.HONGKONG);"
+           style="border: 1px solid #c10707;background-color:#c10707;">
+            <div class="nav-daohang-img">
+                <img class="nav-daohang-imgs" src="/index_files/xianggang-b30ad7ec.png">
+            </div>
+            <div class="nav-daohang-text">
+                <span style="color: #FFFFFF;">港彩</span>
+            </div>
+        </a>
+        <a class="nav-daohang-a-b" target="_blank" href="{$site.xggfwturl}"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.HONGKONG);"
+           style="border: 1px solid #0755c1;background-color:#ffffff;">
+
+            <div class="nav-daohang-text">
+                <span style="color:red">官方网投</span>
+            </div>
+        </a>
+        <a class="nav-daohang-a-b" target="_blank" href="{$site.xgtm49url}"
+           onclick="javascript:lotteryTypeSwitch(LOTTERY_TYPES.HONGKONG);"
+           style="border: 1px solid #b907c1;background-color:#ffffff;">
+
+            <div class="nav-daohang-text">
+                <span style="color:red">特码49倍</span>
+            </div>
+        </a>
+    </div>
+</div>
+<!-- 彩种导航end -->
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩  【一年四季】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0" class="ke-zeroborder">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        {include file="index:ydjj"}
+                                        <br>
+                                        <span style="font-size:16px;color:#000000;">春</span><span
+                                            style="font-size:16px;color:#000000;">：</span><span
+                                            style="font-size:16px;color:#000000;">兔虎龙-</span><span
+                                            style="font-size:16px;"><span style="color:#000000;">夏</span><span
+                                            style="color:#000000;">：</span></span><span
+                                            style="font-size:16px;color:#000000;">蛇马羊</span><br>
+                                        <span style="font-size:16px;"><span style="color:#000000;">秋</span><span
+                                                style="color:#000000;">：</span></span><span
+                                            style="font-size:16px;color:#000000;">猴鸡狗-</span><span
+                                            style="font-size:16px;"><span style="color:#000000;">冬</span><span
+                                            style="color:#000000;">：</span></span><span
+                                            style="font-size:16px;color:#000000;">鼠猪牛</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.am.ynsj" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：</span>一年四季<span style="font-size:16px;">【</span><span
+                                        style="font-size:16px;">{$val.ju|bg=###,'#FF0000',''}</span><span style="font-size:16px;">】开：</span><span
+                                        style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                        style="font-size:16px;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{notempty name="data.am.ezjj"}
+<div class="module" id="mika_ezjj">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【二字经解】★
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {volist name="data.am.ezjj" id="val"}
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align:left;">
+                                    <span style="color: #ffff00; font-weight: bold; font-size: 16px;"><span style="background-color: #000000;">{$val.qi}期（人物二字经参考解特）&nbsp;</span></span>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩  【前后中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" bgcolor="white" style="text-align:center;">
+                                    <p>
+                                        {include file="index:ydjj"}
+                                        <br>
+                                        <span style="font-size:16px;color:#000000;">&nbsp;</span><span="" style=""><span
+                                            style="font-size:16px;color:#000000;">前肖</span><span
+                                            style="font-size:16px;color:#000000;">：鼠牛虎兔龙蛇&nbsp;</span></span="">
+                                    </p>
+                                    <p>
+                                        <span style="font-size:16px;color:#000000;">后肖</span><span
+                                            style="font-size:16px;color:#000000;">：马羊猴鸡狗猪&nbsp;</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.am.qhzt" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：</span><span
+                                        style="font-size:16px;">前后中特</span><span style="color:#000000;font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】</span><span
+                                        style="font-size:16px;">开：</span><span
+                                        style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                        style="font-size:16px;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>	 香港六合彩【广告赞助商】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {$page['19']['content']??''}
+                        <style>
+                            a {
+                                text-decoration: none;
+                            }
+
+                            * {
+                                margin: 0px;
+                                padding: 0px;
+                            }
+
+                            .xgam {
+                                font-family: '微软雅黑';
+                                font-size: 13pt;
+                                text-align: center;
+                                color: #000;
+                                text-align: center;
+                            }
+
+                            .xgam img {
+                                vertical-align: middle;
+                            }
+
+                            .xgam table {
+                                border-collapse: collapse;
+                                background: #ff0;
+                            }
+
+                            .xgam table td {
+                                padding: 5px 0;
+                                border: solid 1px #ddd;
+                                cursor: pointer;
+                            }
+
+                            .xgam-tit {
+                                padding: 3px 0 2px 0;
+                                height: 30px;
+                                line-height: 30px;
+                                font-size: 15pt;
+                                font-weight: 700;
+                            }
+
+                            .xgam-tit img {
+                                width: 30px;
+                                height: 30px;
+                            }
+
+                            .xgam-web {
+                                padding: 2px 0 3px 0;
+                                font-size: 18pt;
+                                font-weight: 700;
+                            }
+                        </style>
+                        <div id="yqlj4">
+                        </div>
+                        <table border="1" width="100%" bgcolor="#ffffff">
+                            <tbody>
+                            {volist name="data.xg.zz1" id="val"}
+                            <tr>
+                                <td style="border:solid 1px #ddd;" bgcolor="white" height="45">
+                                    <p align="center">
+                                        <span style="color:#000000;font-family:微软雅黑;">
+                                            <span style="color:#000000;font-size:16px;white-space:nowrap;">
+                                            <a target="_blank" href="{$val.url}"> <img src="/index_files/13-62f35d06-9422435e.png">
+                                                {$val.txt|bg=###,'#FF0000',''}
+                                            </a>
+                                        </span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩 【家野中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        {include file="index:ydjj"}
+                                        <br>
+</span></span> <span style="color:#0000ff;font-size:14pt;"><span style="color:#000000;font-size:16px;">家禽</span><span
+                                            style="color:#000000;font-size:16px;">：</span><span
+                                            style="color:#000000;font-size:16px;">牛马羊鸡狗猪</span></span><br>
+                                        <span style="color:#0000ff;font-size:14pt;"><span
+                                                style="color:#000000;font-size:16px;">野兽</span><span
+                                                style="color:#000000;font-size:16px;">：</span><span
+                                                style="color:#000000;font-size:16px;">鼠虎兔龙蛇猴</span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.am.jyzt" id="val"}
+                            <tr>
+                                <td width="100%" height="40px" style="text-align:center;width:100%;height:40px;">
+                                    <span style="font-size:16px;color:#000000;">{$val.qi}期：</span><span
+                                        style="font-size:16px;">&nbsp;</span><span
+                                        style="font-size:16px;color:#000000;">家野中特</span><span style="font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】</span><span
+                                        style="font-size:16px;">开：</span><span
+                                        style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                        style="font-size:16px;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩   【阴阳两肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        {include file="index:ydjjhk"}
+                                        <span style="font-size:16px;"> <span style="color:#FF0000;"><span
+                                                style="color:#000000;">阴肖</span><span
+                                                style="color:#000000;">：</span></span><span style="color:#000000;">鼠龙蛇马狗猪</span></span><br>
+                                        <span style="font-size:16px;"> <span style="color:#000000;">阳肖</span><span
+                                                style="color:#000000;">：牛虎兔羊猴鸡</span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.yylx" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：阴阳两肖【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            <tr>
+                                <td style="height:60px;" align="center">
+                                    <span style="color:#003399;font-size:16px;">谁都有一样的机会，只要相信你的眼光，</span><br>
+                                    <span style="color:#003399;font-size:16px;"> 你的勇气，钱就是你的囊中之物。</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【家野中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" style="width:100%;">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        {include file="index:ydjjhk"}
+                                        <br>
+                                        <span style="font-size:16px;"> <span style="color:#FF0000;"><span
+                                                style="color:#000000;">家禽</span><span
+                                                style="color:#000000;">：</span></span><span style="color:#000000;">牛马羊鸡狗猪</span></span><br>
+                                        <span style="font-size:16px;"> <span style="color:#000000;">野兽</span><span
+                                                style="color:#000000;">：鼠虎兔龙蛇猴</span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.jyzt" id="val"}
+                            <tr>
+                                <td height="40" align="center"
+                                    style="border-width:1px;border-style:solid;border-color:#d2d2d2;">
+                                    <div style="text-align:center;">
+                                        <span style="font-size:16px;">{$val.qi}期：家野中特【{$val.ju|bg=###,'#FF0000',''}】 开：<span style="color:#FF0000;">{$val.kai}</span>中</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="module" id="tike2">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩 【高手心水】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {$page['20']['content']??''}
+                                {volist name="data.xg.gst" id="val"}
+                                <p style="text-align:left;">
+                                    <span class="cgi-gsb-tit" style="color:#000000;background-color:#FFE500;">高手帖</span><a
+                                        target="_blank" href="/xggst/{$val.id}.html"> <span
+                                        style="color:#000000;">{$val.qi}期:</span> <span style="color:#800080;"><span
+                                        style="color:#000000;">【<span style="color:#000000;">{$val.name|bg=###,'#FF0000',''}</span>】</span><span
+                                        style="color:#006600;"><span style="color:#000000;">{$val.ym}</span><img
+                                        src="/index_files/tietu-b9862e57.gif" alt=""></span></span></a>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{$page['14']['content']??''}
+
+<!--本站域名开始1-->
+{include file="common:xwz"}
+<!--域名1end-->
+
+<div id="am3"></div>
+{notempty name="data.am.czsx"}
+<div class="module" id="mika_czsx">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★ 【传真三肖】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    {volist name="data.am.czsx" id="val"}
+                    <div class="module-panel m-article-con">
+                        <img src="{$val.image}" alt="">
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+{notempty name="data.xg.sbxxj"}
+<div class="module" id="xg_jsbx">
+    <div class="module-panel">
+        <div name="Hongkong" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★【解四不像】★
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <img src="{$data['xg']['sbxxj'][0]['image']??''}" alt="">
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            </tbody>
+                        </table>
+                        {volist name="data.xg.sbxxj" id="val"}
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align:left;">
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+
+<div class="module" id="mika4">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【黑白中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        {include file="index:ydjj"}
+                                        <br>
+                                        <span style="font-size:16px;color:#000000;">白肖</span><span
+                                            style="font-size:16px;color:#000000;">：</span><span
+                                            style="font-size:16px;color:#000000;">鼠牛虎鸡狗猪</span><br>
+                                        <span style="font-size:16px;color:#000000;">黑肖</span><span
+                                            style="font-size:16px;color:#000000;">：</span><span
+                                            style="font-size:16px;color:#000000;">兔龙蛇马羊猴</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.am.hbzt" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;color:#000000;">{$val.qi}期：</span><span
+                                        style="font-size:13pt;color:#FF0000;"><span
+                                        style="color:#000000;font-size:16px;">黑白中特</span><span
+                                        style="color:#000000;font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】</span><span
+                                        style="font-size:16px;">开：</span><span style="color:red;"><span
+                                        style="font-size:16px;">{$val.kai}</span><span
+                                        style="color:#000000;font-size:16px;">中</span></span></span>
+                                </td>
+                            </tr>
+                            {/volist}
+                            <tr>
+                                <td style="height:60px;" align="center">
+                                    <span style="font-size:16px;color:#003399;">赢钱的滋味就是这么好啊，</span><br>
+                                    <span style="font-size:16px;color:#003399;"> 我就喜欢着这样中奖的滋味。</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module" id="tike4">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 香港六合彩  【一肖一码】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <!----结束---->
+                        {volist name="data.xg.yxym" id="val"}
+                        <table border="0" height="40" width="100%" bordercolor="#CCCCCC" cellpadding="0" id="table{$i}" style="border-collapse:collapse;border-spacing:0px;color:#444444;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;orphans:auto;text-indent:0px;text-transform:none;ffffff-space:normal;widows:1;word-spacing:0px;-webkit-text-stroke-width:0px;text-align:center;font-size:10pt;background-color:#FFFFFF;" class="ke-zeroborder">
+                            <tbody>
+                            <tr>
+                                <td height="40" width="100%" style="margin:0px;padding:3px 2px;font-size:15pt;border:1px solid #E5E5E5;word-break:break-all;" colspan="3" bgcolor="Teal">
+                                    <a target="_blank" href="{$val.url}"><span style="color:#FFFFFF;"><span style="color:#FFFFFF;">{$val.ad}</span></span></a>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {$val.content}
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{notempty name="data.am.sqjh"}
+<div class="module" id="mika_sqjh">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩  【三期计划】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" bgcolor="white" style="text-align:center;">
+                                    <p>
+                                        <span style="font-size:13px;color:#000000; line-height: 28px;">投资前言：单双必赚方法:=包单双赔利100比98=如果你想赚百万,请必须要有10万元的本钱,第1期保持一共下3万.如错1期最后1期大胆下7万,(保证三期最少开一期) .包的越久下的越大,保证让你的财源滚滚.不要贪心,慢慢来,心急吃不到热豆腐!(如果您有本钱！不懂得投资什么生意！澳门六合彩网教你投资本站的单双两期必开一期！ 比放在银行利息高几十倍！也比炒股票更赚钱！如果你觉得可以的话！您也可以叫您身边有钱没有生意做的朋友一起来投资！）</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.am.sqjh" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <p style="text-align: center;"><span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;">{$val.qi}期</span><span style="background-color: #ffffff; color: #ff0000; font-family: 宋体; font-size: 18px;">【<span style="background-color: #ffffff; color: #ff0000; font-family: 宋体; font-size: 18px;"><span style="background-color: #ffffff; color: #ff0000; font-family: 宋体; font-size: 18px;">{$val.ju|bg=###,'#FF0000',''}</span></span>】<span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;"></span></span><span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;"><span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;">{$val.kai}</span>！</span></p>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+{notempty name="data.am.ptjh"}
+<div class="module" >
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩  【平特计划】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" bgcolor="white" style="text-align:center;">
+                                    <p>
+                                        <span style="font-size:13px;color:#000000; line-height: 28px;">投资前言：平特一肖必赚方法:=包平特一肖赔利100比110=如果你想赚百万,请必须要有10万元的本钱,第1期保持一共下3万.如错1期最后1期大胆下7万,(保证两期最少开一期) .包的越久下的越大,保证让你的财源滚滚.不要贪心,慢慢来,心急吃不到热豆腐!(如果您有本钱！不懂得投资什么生意！澳门六合彩网教你投资本站的单双两期必开一期！ 比放在银行利息高几十倍！也比炒股票更赚钱！如果你觉得可以的话！您也可以叫您身边有钱没有生意做的朋友一起来投资！
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.am.ptjh" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <p style="text-align: center;"><span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;">{$val.qi}期</span><span style="background-color: #ffffff; color: #ff0000; font-family: 宋体; font-size: 18px;">【<span style="background-color: #ffffff; color: #ff0000; font-family: 宋体; font-size: 18px;"><span style="background-color: #ffffff; color: #ff0000; font-family: 宋体; font-size: 18px;">{$val.ju|bg=###,'#FF0000',''}</span></span>】<span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;"></span></span><span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;"><span style="background-color: #ffffff; color: #0000ff; font-family: 宋体; font-size: 18px;">{$val.kai}</span>！</span></p>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+{notempty name="data.am.amyyzt"}
+<div class="module" id="mika_yyzt">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【一语中特】★
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {volist name="data.am.amyyzt" id="val"}
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align:left;">
+                                    <strong><span style=" color: #169179;">{$val.qi}期一语中特【{$val.gp}】</span></strong>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+<div class="module" id="tike1">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【大小中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0" class="ke-zeroborder">
+                            <tbody>
+                            <tr>
+                                <td align="center" style="border:0.5px width:80%;height:40px;">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td align="center" style="border:0.5px width:80%;height:40px;">
+                                    <span style="font-size:16px;"><span style="color:#000000;">小:</span><span
+                                            style="color:#000000;">1 →24 </span><span
+                                            style="color:#000000;">大:</span><span
+                                            style="color:#000000;">25 →49</span></span>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.dxzt" id="val"}
+                            <tr>
+                                <td align="center" style="border:0.5px width:80%;height:40px;">
+                                    <span style="font-size:16px;">{$val.qi}期：大小中特【{$val.ju|bg=###,'#FF0000',''}】开：<span style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--广告1-->
+<div class="cgi-zl-top adFooter add-wraper">
+    <div>
+        {$page['14']['content']??''}
+    </div>
+    <!--中彩APP-->
+    <div class="fivetab">
+        <!--yc彩票开始-->
+        {notempty name="data.apps"}
+        {include file="common:ad1"}
+        {/notempty}
+    </div>
+    <!--中彩APPend-->
+
+
+    <!--劫持教程-->
+    <table style="border-collapse:collapse;color:#000;border:0px solid #fff;" border="0" width="100%"
+           class="ke-zeroborder">
+        <tbody>
+        <tr>
+            <td style="color:#000;font-family:新宋体;font-weight:700;border:1px solid #000;" bgcolor="#fff" width="100%"
+                height="80">
+                <p style="line-height:200%;" align="center">
+                    <a href="https://wz.824711.com/fangjiechi" target="_blank"><span
+                            style="font-family:方正中粗雅宋简体;font-size:11pt;color:#FF0000;">有时打开彩吧资讯时却发现突然跳转到别的网站？</span><br>
+                        <span style="font-family:方正中粗雅宋简体;font-size:13pt;color:#003399;">此时你的DNS就被劫持了。如何解决呢?</span><br>
+                        <span style="font-family:方正中粗雅宋简体;font-size:14pt;color:#003399;">彩吧资讯防劫持教程</span><br>
+                        <img src="/index_files/a9bda23819b472f3-028c566a-da02ee3e-9e371324.gif">
+                        <span style="color:red;background-color:#ff0;font-size:15pt;"><strong>【点击查看电脑/手机/平板教程】</strong></span>
+                    </a>
+                </p>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <!--劫持教程end-->
+</div>
+<!--广告1-->
+
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【管家婆图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <img src="{$data['am']['gjpt'][0]['image']??''}" alt="">
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            </tbody>
+                        </table>
+                        {volist name="data.am.gjpt" id="val"}
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align:left;">
+				<span style="font-size:medium;">{$val.qi}期管家婆一句话:{$val.xj|bg=###,'#FF0000',''}</span>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★【赚客报图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    {volist name="data.xg.zkbt" id="val"}
+                    <div class="module-panel m-article-con">
+                        <img src="{$val.image}" alt="">
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{notempty name="data.am.jnmb"}
+<div class="module" id="mika_jnmb">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【金牛秘报】★
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {volist name="data.am.jnmb" id="val"}
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align:left;">
+                                    <span style="font-size:medium; font-weight: bold; color: #FF0000">金牛秘报专家≦{$val.qi}期≧期</span>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+{notempty name="data.am.pmzq"}
+<div class="module" id="mika_pmzq">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【平码专区】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {volist name="data.am.pmzq" id="val"}
+                                <p style="text-align:left;">
+                                    <a target="_blank" href="/pmzq/{$val.id}.html">
+                                        <span style="color:#000000;">&nbsp;<img src="/index_files/tietu-fb751412.gif" alt="">{$val.qi}期: 澳门六合</span>
+                                        【<span style="color:#FF0000;">{$val.name|bg=###,'#FF0000',''}</span>】<span style="color: #000">-平码专区</span></a>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩  【琴棋书画】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        <span style="font-size:16px;"><span style="color:#003399;"></span><span
+                                                style="color:#000000;">琴肖</span><span
+                                                style="color:#000000;">：鸡兔蛇---</span><span
+                                                style="color:#000000;">书</span><span
+                                                style="color:#000000;">肖</span><span style="color:#000000;">：马龙虎</span></span><br>
+                                        <span style="font-size:16px;"> <span style="color:#000000;">棋肖</span><span
+                                                style="color:#FF0000;"><span style="color:#000000;">：</span><span
+                                                style="color:#000000;"><span style="color:#000000;">鼠</span><span
+                                                style="color:#000000;">牛狗---</span><span
+                                                style="color:#000000;">画肖</span><span style="color:#000000;">：羊猴猪</span></span></span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.qqsh" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：琴棋书画【{$val.ju|bg=###,'#FF0000',''}】开：<span style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            <tr>
+                                <td style="height:60px;" align="center">
+                                    <span style="color:#003399;font-size:16px;">在这里我可以保证让你月月赚大钱，</span><br>
+                                    <span style="color:#003399;font-size:16px;"> 请千万彩民把握好最佳时期。</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mika2"></div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩【大小中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table width="100%" border="1">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjj"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;"><span style="color:#FF0000;font-size:16px;"><span
+                                            style="color:#000000;">小</span><span
+                                            style="color:#000000;">：</span></span><span
+                                            style="font-size:16px;color:#000000;">1 →24 </span><span
+                                            style="color:#000000;font-size:16px;">大</span><span
+                                            style="font-size:16px;color:#000000;">：25 →49</span></span>
+                                </td>
+                            </tr>
+                            {volist name="data.am.dxzt" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：</span><span
+                                        style="font-size:16px;">大小中特</span><span style="color:#000000;font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】</span><span
+                                        style="color:#000000;font-size:16px;">开：</span><span
+                                        style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                        style="color:#000000;font-size:16px;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★  【挂牌天书】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    {volist name="data.xg.gpts" id="val"}
+                    <div class="module-panel m-article-con">
+                        <img src="{$val.image}" alt="">
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩【成语平特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td width="100%" height="45px"
+                                    style="text-align:center;width:100%;height:40px;font-size:12pt;">
+                                    {include file="index:ydjj"}
+                                </td>
+                            </tr>
+                            {volist name="data.am.cypt" id="val"}
+                            <tr>
+                                <td width="100%" height="45px"
+                                    style="text-align:center;width:100%;height:40px;font-size:12pt;">
+                                    <span style="color:#000000;">{$val.qi}期：</span>成语平特<span
+                                        style="color:#000000;">【{$val.ciyu|bg=###,'#FF0000',''}】</span> <span style="color:#000000;">开：</span><span
+                                        style="color:#FF0000;"><span style="color:#FF0000;">{$val.kai}</span></span><span
+                                        style="color:#000000;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="tike3"></div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【吉凶中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table cellspacing="0" cellpadding="0" bordercolor="#FFFFFF"
+                               style="width:100%;border:solid 1px #ddd;">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        {include file="index:ydjjhk"}
+                                        <br>
+                                        <span style="font-size:16px;"> <span style="color:#000000;">吉美：</span><span
+                                                style="color:#000000;">兔龙蛇马羊鸡</span></span><br>
+                                        <span style="font-size:16px;"> 凶丑：鼠牛虎猴狗猪</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.jxzt" id="val"}
+                            <tr>
+                                <td height="40" align="center"
+                                    style="border-width:1px;border-style:solid;border-color:#d2d2d2;">
+                                    <div style="text-align:center;">
+                                        <span style="font-size:16px;">{$val.qi}期：吉凶中特【{$val.ju|bg=###,'#FF0000',''}】 开：<span style="color:#FF0000;">{$val.kai}</span>中</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{notempty name="data.am.gpjx"}
+<div class="module" id="mika_gpjx">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【挂牌解析】★
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <img src="{$data['am']['gpjx'][0]['image']??''}" alt="">
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            </tbody>
+                        </table>
+                        {volist name="data.am.gpjx" id="val"}
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align:left;">
+                                    <span style="font-size:medium; font-weight: bold; color: #FF00FF">{$val.qi}期挂牌:《{$val.gp|bg=###,'#FF0000',''}》</span>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+{notempty name="data.xg.jjmh"}
+<div class="module" id="xg_jjmh">
+    <div class="module-panel">
+        <div name="Hongkong" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★【精解马会】★
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <img src="{$data['xg']['jjmh'][0]['image']??''}" alt="">
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            </tbody>
+                        </table>
+                        {volist name="data.xg.jjmh" id="val"}
+                        <table width="100%" style="border:1px solid #E5E5E5;border-collapse:collapse;">
+                            <tbody>
+                            <tr>
+                                <td style="text-align:left;">
+                                    <span style="font-size:medium; font-weight: bold; color: #FF00FF">{$val.qi}期马会传真:《{$val.gp|bg=###,'#FF0000',''}》</span>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【阴阳中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%"
+                               style="border:1px solid #C0C0C0;font-size:13pt;font-family:微软雅黑;border-collapse:collapse;text-align:center;font-weight:500;"
+                               bordercolor="#C0C0C0">
+                            <tbody>
+                            <tr>
+                                <td width="25%" height="40">
+                                    {include file="index:ydjj"}
+                                    <br>
+                                    <span style="font-size:16px;"> <span style="color:#000000;font-size:16px;">阴肖</span><span
+                                            style="color:#000000;font-size:16px;">：猪,狗,马,蛇,龙,鼠</span></span><br>
+                                    <span style="font-size:16px;"> <span style="color:#FF0000;font-size:16px;"><span
+                                            style="color:#000000;">阳肖</span><span style="color:#000000;">：</span></span><span
+                                            style="color:#000000;font-size:16px;">鸡,猴,羊,兔,虎,牛</span></span>
+                                </td>
+                            </tr>
+                            {volist name="data.am.yyzt" id="val"}
+                            <tr>
+                                <td width="25%" height="40">
+                                    <span style="font-size:16px;">{$val.qi}期：</span>阴阳中特<span
+                                        style="font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】开：</span><span
+                                        style="color:#FF0000;font-size:16px;">{$val.kai}</span><span
+                                        style="font-size:16px;">中 </span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{notempty name="data.am.ymsp"}
+<div class="module" id="mika_ymsp">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【幽默视频】★
+                    </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <p>
+                            <span style="font-size: 14pt;">2023年<span style="color: #ff0000;">第{$data.am.ymsp.qi}期</span>视频猜测（<span style="color: #ff0000;">{$data.am.ymsp.ju}</span>）
+
+                        </span>
+                        </p>
+                        <style>
+                            .ymspcc *{font-size: 15px;}
+                        </style>
+                        <div class="ymspcc" style="margin:10px 0; font-size: 14px;">{$data.am.ymsp.content}</div>
+                        <video style="width: 100%; " controls="controls" width="100%" controlslist="nodownload" preload="none">
+                            <source src="{$data['am']['ymsp']['image']??''}">
+                        </video>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【四不像玄机图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    {volist name="data.am.xjt" id="val"}
+                    <div class="module-panel m-article-con">
+                        <img src="{$val.image}" alt="">
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【广告赞助商】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {$page['19']['content']??''}
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            {volist name="data.xg.zz3" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <a target="_blank" href="{$val.url}">
+                                        <span style="font-size:18px;color:#000000;">
+                                            {$val.txt|bg=###,'#FF0000',''}
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【广告赞助商】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {$page['19']['content']??''}
+                        <div class="wrapper fn-clear" style="margin:0;background:#fff;">
+                            <style>
+                                * {
+                                    padding: 0px;
+                                    margin: 0px;
+                                }
+
+                                table {
+                                    width: 100%;
+                                    border: 1px;
+                                }
+
+                                .hj p {
+                                    text-align: center;
+                                    line-height: 40px;
+                                    font-size: large;
+                                    border: 1px solid #ddd
+                                }
+                            </style>
+                            <div class="hj">
+                                <div class="jrtzao">
+                                    <div class="jrtzao-tit"
+                                         style="text-align:center;border:solid 1px #ddd;line-height:35px;">
+                                        <span style="font-size:21pt;color:#000000;"> <span
+                                                style="background-color:#FFFF00;color:red;"> <img border="0"
+                                                                                                  src="/index_files/2-f53b7738-9ca8d657.gif"
+                                                                                                  style="width:44px;height:43px;vertical-align:middle;">今日推荐 <img
+                                                border="0" src="/index_files/2-f53b7738-9ca8d657.gif"
+                                                style="width:44px;height:43px;vertical-align:middle;"></span></span>
+                                    </div>
+                                    <div class="jrtzao-box">
+                                        {volist name="data.am.zz1" id="val"}
+                                        <div style="text-align:center;border:solid 1px #ddd;line-height:35px;">
+                                            <span style="font-size:16px;">{$val.qi}期:</span>
+                                            <a target="_blank" href="{$val.url}" style="font-size:10pt;">
+                                                <span style="color:#000000;font-size:16px;text-decoration-line:none;line-height:32px;" font="" color="#c20deff2">
+                                                    {$val.txt|bg=###,'#FF0000',''}
+                                                </span>
+                                            </a>
+                                        </div>
+                                        {/volist}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module" id="xg_ptlx">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩  【平特两肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody style="margin:0px;padding:0px;">
+                            <tr style="margin:0px;padding:0px;">
+                                <td bgcolor="#ffffff" height="40"
+                                    style="margin:0px;padding:3px 2px;border:1px solid #E5E5E5;word-break:break-all;">
+                                    <p align="center"
+                                       style="margin:0px;padding:0px;border:0px none;vertical-align:baseline;font-variant:normal;">
+                                        {include file="index:ydjjhk"}
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.ptlx" id="val"}
+                            <tr style="margin:0px;padding:0px;">
+                                <td bgcolor="#ffffff" height="40"
+                                    style="margin:0px;padding:3px 2px;border:1px solid #E5E5E5;word-break:break-all;">
+                                    <p align="center"
+                                       style="margin:0px;padding:0px;border:0px none;vertical-align:baseline;font-variant:normal;">
+                                        <span style="font-size:16px;">{$val.qi}期：平特2肖【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                                style="color:#FF0000;">{$val.kai}</span>中</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {/volist}
+                            <tr style="margin:0px;padding:0px;">
+                                <td bgcolor="#ffffff" height="60"
+                                    style="margin:0px;padding:3px 2px;border:1px solid #E5E5E5;word-break:break-all;">
+                                    <p align="center"
+                                       style="margin:0px;padding:0px;border:0px none;vertical-align:baseline;font-variant:normal;">
+                                        <span style="color:#003399;font-size:16px;">公开：才能证明实力，什么马后炮改料狗</span><br>
+                                        <span style="color:#003399;font-size:16px;"> 都滚一边去吧，
+我们就是期期公开：。</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="module" id="mika_jzds">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【精准单双】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" cellspacing="0" cellpadding="0" bordercolor="#FFFFFF" style="width:100%;">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center"
+                                    style="border-width:1px;border-style:solid;border-color:#d2d2d2;">
+                                    <div style="text-align:center;">
+                                        {include file="index:ydjj"}
+                                    </div>
+                                </td>
+                            </tr>
+                            {volist name="data.am.jzds" id="val"}
+                            <tr>
+                                <td height="40" align="center"
+                                    style="border-width:1px;border-style:solid;border-color:#d2d2d2;">
+                                    <div style="text-align:center;">
+                                        <span style="font-size:16px;">{$val.qi}期：</span>精中单双<span
+                                            style="font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】 开：</span><span
+                                            style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                            style="font-size:16px;">中</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩 【单双中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            {volist name="data.xg.dszt" id="val"}
+                            <tr>
+                                <td height="40" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：单双中特【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩【天地中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjj"}
+                                    <br>
+                                    <span style="font-size:16px;"><span style="color:#000000;">天肖</span><span
+                                            style="color:#000000;">：龙兔牛马猴猪</span></span><br>
+                                    <span style="font-size:16px;"><span style="color:#000000;">地肖</span><span
+                                            style="color:#000000;">：鼠虎蛇羊鸡狗</span></span>
+                                </td>
+                            </tr>
+                            {volist name="data.am.tdzt" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：</span>天地生肖<span style="font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】 开：</span><span style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                        style="font-size:16px;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            <tr>
+                                <td style="height:60px;" align="center">
+                                    <span style="color:#003399;font-size:16px;">大家都跟了吧，资料这么中，</span><br>
+                                    <span style="color:#003399;font-size:16px;"> 如果还没跟的朋友可真要抓紧了。</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩  【双波中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <!--波霸双波-->
+                        <div class="box">
+                            <div>
+                                <img src="/index_files/波色_proc-40fc754e-48201006.jpg" width="100%">
+                                <table border="1" width="100%">
+                                    <tbody>
+                                    <tr>
+                                        <td style="height:40px;" align="center">
+                                            {include file="index:ydjjhk"}
+                                        </td>
+                                    </tr>
+                                    {volist name="data.xg.sbzt" id="val"}
+                                    <tr>
+                                        <td style="height:40px;" align="center">
+                                            <span style="font-size:16px;">{$val.qi}期：双波中特【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                                    style="color:#FF0000;">{$val.kai}</span>中</span>
+                                        </td>
+                                    </tr>
+                                    {/volist}
+                                    <tr>
+                                        <td style="height:60px;" align="center">
+                                            <span style="color:#003399;font-size:16px;">好资料看到了就不</span><span
+                                                style="color:#003399;font-size:16px;">要错过，就跟机会一样，</span><br>
+                                            <span style="color:#003399;font-size:16px;"> 不抓住一下就流失了。</span>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module" id="mika_ampgt">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【澳门跑狗图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {volist name="data.am.pgt" id="val"}
+                        <img class="smallimg" style="width:49%; border: none; margin: 0px;" src="{$val.image}" alt="">
+                        {/volist}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩  【男女中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        <span style="font-size:16px;"><span style="color:#000000;">男肖</span><span
+                                                style="color:#000000;">：鼠牛虎龙马猴狗</span></span><br>
+                                        <span style="font-size:16px;"> <span style="color:#000000;">女肖</span><span
+                                                style="color:#000000;">：兔蛇羊鸡猪</span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.nvzt" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：男女中特【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>	 澳门六合彩【广告赞助商】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {$page['19']['content']??''}
+                        <style>
+                            a {
+                                text-decoration: none;
+                            }
+
+                            * {
+                                margin: 0px;
+                                padding: 0px;
+                            }
+
+                            .xgam {
+                                font-family: '微软雅黑';
+                                font-size: 13pt;
+                                text-align: center;
+                                color: #000;
+                                text-align: center;
+                            }
+
+                            .xgam img {
+                                vertical-align: middle;
+                            }
+
+                            .xgam table {
+                                border-collapse: collapse;
+                                background: #ff0;
+                            }
+
+                            .xgam table td {
+                                padding: 5px 0;
+                                border: solid 1px #ddd;
+                                cursor: pointer;
+                            }
+
+                            .xgam-tit {
+                                padding: 3px 0 2px 0;
+                                height: 30px;
+                                line-height: 30px;
+                                font-size: 15pt;
+                                font-weight: 700;
+                            }
+
+                            .xgam-tit img {
+                                width: 30px;
+                                height: 30px;
+                            }
+
+                            .xgam-web {
+                                padding: 2px 0 3px 0;
+                                font-size: 18pt;
+                                font-weight: 700;
+                            }
+                        </style>
+                        <div id="yqlj4">
+                        </div>
+                        <table border="1" width="100%" bgcolor="#ffffff">
+                            <tbody>
+                            {volist name="data.am.zz2" id="val"}
+                            <tr>
+                                <td style="border:solid 1px #ddd;" bgcolor="white" height="45">
+                                    <p align="center">
+                                        <span style="color:#000000;font-family:微软雅黑;">
+                                            <span style="color:#000000;font-size:16px;white-space:nowrap;">
+                                            <a target="_blank" href="{$val.url}"> <img src="/index_files/13-62f35d06-9422435e.png">
+                                                {$val.txt|bg=###,'#FF0000',''}
+                                            </a>
+                                        </span>
+                                        </span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {/volist}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="tike5"></div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【必杀三肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            {volist name="data.xg.bssx" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：必杀三肖【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{$page['14']['content']??''}
+<div class="module" style="display: none;">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【高手心水】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {$page['20']['content']??''}
+                                {volist name="data.am.gsxs" id="val"}
+                                <p style="text-align:left;">
+                                    <a target="_blank" href="/amgstxs/{$val.id}.html"><span
+                                            style="color:#000000;">&nbsp;<img src="/index_files/tietu-fb751412.gif"
+                                                                              alt="">{$val.qi}期: 澳门六合</span><span
+                                            style="color:#000000;"><span>【{$val.name|bg=###,'#FF0000',''}】</span>-公式规律</span></a>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{notempty name="data.xg.zbxjs"}
+<div class="module" id="xg_zbxj">
+    <div class="module-panel">
+        <div name="Hongkong" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【正版玄机】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {volist name="data.xg.zbxjs" id="val"}
+                                <p style="text-align:left;">
+                                    <a target="_blank" href="/zbxjs/{$val.id}.html">
+                                        <span style="color:#003399;">{$val.qi}期: 玄机料</span>
+                                        【<span style="color:#FF0000;">{$val.name|bg=###,'#FF0000',''}</span>】<span style="color: #000"></span></a>
+                                    <span style="float: right; font-size: 13px; color: #787878">{$val.zz}</span>
+                                <div style="clear:both;"></div>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+<div class="module" id="mika5">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【天地两肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        <span style="font-size:16px;"><span style="color:#000000;">天肖</span><span
+                                                style="color:#000000;">：龙兔牛马猴猪</span></span><br>
+                                        <span style="font-size:16px;"> <span style="color:#000000;">地肖</span><span
+                                                style="color:#000000;">：鼠虎蛇羊鸡狗</span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.tdlx" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：天长地久【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            <tr>
+                                <td style="height:60px;" align="center">
+                                    <span style="color:#003399;font-size:16px;">在这里我可以保证让你月月赚大钱，</span><br>
+                                    <span style="color:#003399;font-size:16px;"> 请千万彩民把握好最佳时期。</span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【广告赞助商 】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {$page['19']['content']??''}
+                        <div class="wrapper fn-clear" style="margin:0;background:#fff;">
+                            <style>
+                                * {
+                                    padding: 0px;
+                                    margin: 0px;
+                                }
+
+                                table {
+                                    width: 100%;
+                                    border: 1px;
+                                }
+
+                                .hj p {
+                                    text-align: center;
+                                    line-height: 40px;
+                                    font-size: large;
+                                    border: 1px solid #ddd
+                                }
+                            </style>
+                            <div class="hj">
+                                <div class="jrtzao">
+                                    <div class="jrtzao-tit"
+                                         style="text-align:center;border:solid 1px #ddd;line-height:35px;">
+                                        <span style="font-size:21pt;color:#000000;"> <span
+                                                style="background-color:#FFFF00;color:red;"> <img border="0"
+                                                                                                  src="/index_files/2-f53b7738-9ca8d657.gif"
+                                                                                                  style="width:44px;height:43px;vertical-align:middle;">今日推荐 <img
+                                                border="0" src="/index_files/2-f53b7738-9ca8d657.gif"
+                                                style="width:44px;height:43px;vertical-align:middle;"></span></span>
+                                    </div>
+                                    <div class="jrtzao-box">
+                                        {volist name="data.xg.zz3" id="val"}
+                                        <div style="text-align:center;border:solid 1px #ddd;line-height:35px;">
+                                            <span style="font-size:16px;">{$val.qi}期:</span>
+                                            <a target="_blank" href="{$val.url}" style="font-size:10pt;">
+                                                <span style="color:#000000;font-size:16px;text-decoration-line:none;line-height:32px;" font="" color="#c20deff2">
+                                                    {$val.txt|bg=###,'#FF0000',''}
+                                                </span>
+                                            </a>
+                                        </div>
+                                        {/volist}
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【男女生肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%">
+                            <tbody>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        {include file="index:ydjj"}
+                                        <br>
+                                        <span style="font-size:16px;"><span style="color:#000000;">男</span><span
+                                                style="color:#000000;">：</span></span><span
+                                            style="font-size:16px;color:#000000;">鼠牛虎龙马猴狗</span><br>
+                                        <span style="font-size:16px;"><span style="color:#000000;">女</span><span
+                                                style="color:#000000;">：</span></span><span
+                                            style="font-size:16px;color:#000000;">兔 蛇 羊 鸡 猪</span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.am.nvsx" id="val"}
+                            <tr>
+                                <td style="height:40px;" align="center">
+                                    <span style="font-size:16px;">{$val.qi}期：</span>男女生肖<span style="font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】开：</span><span
+                                        style="font-size:16px;"><span style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{notempty name="data.am.csmg"}
+<div class="module" id="mika_csmg">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★【长沙淼哥】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {volist name="data.am.csmg" id="val"}
+                        <img class="smallimg" style="width:49%; border: none; margin: 0px;" src="{$val.image}" alt="">
+                        {/volist}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+{notempty name="data.xg.wlrt"}
+<div class="module" id="xg_wlrt">
+    <div class="module-panel">
+        <div name="Hongkong" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★【网络热图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {volist name="data.xg.wlrt" id="val"}
+                        <img class="smallimg" style="width:49%; border: none; margin: 0px;" src="{$val.image}" alt="">
+                        {/volist}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★【新版藏宝图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <img src="{$data['xg']['cbt'][0]['image']??''}" alt="">
+                        <table width="100%" border="1" style="border-collapse:collapse;border:solid 1px #ddd;">
+                            <tbody>
+                            </tbody>
+                        </table>
+                        {volist name="data.xg.cbt" id="val"}
+                        <table width="100%" border="1" style="border-collapse:collapse;border:solid 1px #ddd;">
+                            <tbody>
+                            <tr>
+                                <td style="font-family:Tahoma;font-size:14pt;font-weight:400;">
+                                    <span style="color:#FF0000;">{$val.qi}期香港新版藏宝图</span>
+                                    <p>
+                                        <span style="color:#0000FF;">{$val.xj}</span><br>
+                                        <span style="color:#FF0000;">解：{$val.jie|bg=###,'#FF0000',''}</span><br>
+                                        综合生肖：{$val.xiao|bg=###,'#FF0000',''}<br>
+                                        <img src="/index_files/fg0012.gif" width="462" height="18">
+                                    </p>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        {/volist}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【吉美凶丑】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjj"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="40" align="center" bgcolor="white" style="text-align:center;">
+                                    <span style="font-size:16px;"> <span style="color:#000000;">吉美</span><span
+                                            style="color:#000000;">：兔龙蛇马羊鸡</span></span><span
+                                        style="font-size:16px;"><span style="color:#000000;">&nbsp;</span><span
+                                        style="color:#000000;"> &nbsp;</span><span style="color:#000000;">&nbsp;</span></span><span
+                                        style="font-size:16px;"><span style="color:#000000;">凶丑</span><span
+                                        style="color:#000000;">：鼠</span></span><span
+                                        style="font-size:16px;color:#000000;">牛虎猴狗猪</span>
+                                </td>
+                            </tr>
+                            {volist name="data.am.jmxc" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="border-width:1px;border-style:solid;border-color:#d2d2d2;">
+                                    <div style="text-align:center;">
+                                        <span style="font-size:16px;">{$val.qi}期：吉凶中特【{$val.ju|bg=###,'#FF0000',''}】 开：<span style="color:#FF0000;">{$val.kai}</span>中</span>
+                                    </div>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩【广告赞助商】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {$page['19']['content']??''}
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            {volist name="data.am.zz3" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <a target="_blank" href="{$val.url}">
+                                        <span style="font-size:18px;color:#000000;">
+                                            <span style="font-size:16px;">{$val.txt|bg=###,'#FF0000',''}</span>
+                                        </span>
+                                    </a>
+                                </td>
+                            </tr>
+                            {/volist}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{notempty name="data.am.dsgs"}
+<div class="module" id="mika_dsgs">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩【大神公式】
+            </span>
+                </h2>
+            </div>
+            <style>
+                .dsgs a{display: block; width: 30%; background: #fff; border-radius: 6px; padding: 8px 0; text-align: center; margin-bottom: 8px;}
+                @media screen and (max-width: 500px) {
+                    .dsgs a{display: block; width: 48%; background: #fff; border-radius: 6px; padding: 8px 0; text-align: center; margin-bottom: 8px;}
+                }
+            </style>
+            <div class="wrapper fn-clear" style="margin: 0;padding: 0px 5px; background: #f5f5f5;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        {$page['19']['content']??''}
+                        <div class="dsgs"  style="display: flex; justify-content: space-between; flex-wrap: wrap; background: #f5f5f5; padding: 10px 0;">
+                        {volist name="data.am.dsgs" id="val"}
+                        <a href="/dsgs/{$val.id}.html">{$val.qi}期{$val.name|bg=###,'#FF0000',''}</a>
+                        {/volist}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{/notempty}
+
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩【高手心水】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style>
+                            * {
+                                padding: 0px;
+                                margin: 0px;
+                            }
+
+                            table {
+                                width: 100%;
+                                border: 1px;
+                            }
+
+                            .cn p {
+                                text-align: center;
+                                line-height: 40px;
+                                font-size: 13pt;
+                                color: red;
+                                border: 1px solid #91a19c4f
+                            }
+
+                            .cn p b {
+                                color: #008000;
+                            }
+
+                            .cn p strong {
+                                color: #800000;
+                            }
+                        </style>
+                        <div class="cn">
+                            <ul>
+                                {$page['20']['content']??''}
+                                {volist name="data.xg.gst" id="val"}
+                                <p style="text-align:left;">
+                                    <span class="cgi-gsb-tit" style="color:#000000;background-color:#FFE500;">高手帖</span><a
+                                        target="_blank" href="/xggst/{$val.id}.html"><span
+                                        style="color:#000000;"> {$val.qi}期: 香港六合</span><span style="color:#000000;">【<span
+                                        style="background-color:#FF0000;color:#FFE500;">{$val.name|bg=###,'#FF0000',''}</span>】已公开</span></a>
+                                </p>
+                                {/volist}
+
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 澳门六合彩【双波中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <img src="/index_files/波色_proc-40fc754e-d6da9e2f.jpg" width="100%">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjj"}
+                                </td>
+                            </tr>
+                            {volist name="data.am.sbzt" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：双波中特【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module" id="mika_bmbct">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★ 【宝马彩报图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    {volist name="data.am.bmt" id="val"}
+                    <div class="module-panel m-article-con">
+                        <img src="{$val.image}" alt="">
+                    </div>
+                    {/volist}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【左右两肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="45" align="center" style="text-align:center;border:1px solid #C0C0C0;">
+                                    {include file="index:ydjj"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td height="45" align="center" style="text-align:center;border:1px solid #C0C0C0;">
+                                    <span style="font-size:16px;color:#FF0000;"><span style="color:#000000;">左肖: </span><span
+                                            style="color:#000000;">鼠牛龙蛇猴鸡</span><span style="color:#000000;">&nbsp; &nbsp;右肖：</span><span
+                                            style="color:#000000;">虎兔马羊狗猪</span></span>
+                                </td>
+                            </tr>
+                            {volist name="data.am.zylx" id="val"}
+                            <tr>
+                                <td height="45" align="center" style="text-align:center;border:1px solid #C0C0C0;">
+                                    <span style="font-size:16px;">{$val.qi}期：</span>左右生肖<span style="font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】 开：</span><span
+                                        style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                        style="font-size:16px;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩【必杀三肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="45" align="center" style="text-align:center;border:1px solid #C0C0C0;">
+                                    {include file="index:ydjj"}
+                                </td>
+                            </tr>
+                            {volist name="data.am.bssx" id="val"}
+                            <tr>
+                                <td height="45" align="center" style="text-align:center;border:1px solid #C0C0C0;">
+                                    <span style="font-size:16px;">{$val.qi}期：</span>必杀三肖<span
+                                        style="font-size:16px;">【{$val.ju|bg=###,'#FF0000',''}】 开：</span><span
+                                        style="font-size:16px;color:#FF0000;">{$val.kai}</span><span
+                                        style="font-size:16px;">中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩  【前后两肖】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0" class="ke-zeroborder">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="padding:0.7500pt;width:416.8000pt;" width="555">
+                                    <p style="text-align:center;">
+                                        <span style="font-size:16px;"><span style="color:#000000;">前肖</span><span
+                                                style="color:#000000;">：鼠牛虎兔龙蛇 </span></span><br>
+                                        <span style="font-size:16px;"> <span style="color:#000000;">后肖</span><span
+                                                style="color:#000000;">：马羊猴鸡狗猪</span></span>
+                                    </p>
+                                </td>
+                            </tr>
+                            {volist name="data.xg.qhlx" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：前后中特【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg> 香港六合彩【三头中特】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            {volist name="data.xg.stzt" id="val"}
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：三头中特【{$val.ju|bg=###,'#FF0000',''}】开：<span
+                                            style="color:#FF0000;">{$val.kai}</span>中</span>
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★【龙门客栈图】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    {volist name="data.xg.lmkzt" id="val"}
+                    <div class="module-panel m-article-con">
+                        <img src="{$val.image}" alt="">
+                    </div>
+                    {/volist}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module" id="xg_zt24m">
+    <div class="module-panel">
+        <div name="Hongkong" style="display: none">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩 【中特24码】
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                <div class="module">
+                    <div class="module-panel m-article-con">
+                        <style type="text/css">
+                            .style1 {
+                                color: #006600;
+                            }
+                        </style>
+                        <table border="1" width="100%" cellspacing="0" cellpadding="0">
+                            <tbody>
+                            <tr>
+                                <td height="40" align="center" style="text-align:center;">
+                                    {include file="index:ydjjhk"}
+                                </td>
+                            </tr>
+                            {volist name="data.xg.zt24m" id="val"}
+                            <tr>
+                                <td height="80" align="center" style="text-align:center;">
+                                    <span style="font-size:16px;">{$val.qi}期：开：<span style="color:#FF0000;">{$val.kai}</span>中</span>
+                                    {$val.content}
+                                </td>
+                            </tr>
+                            {/volist}
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="module" id="mika_zbtk">
+    <div class="module-panel">
+        <div name="Aomen" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>澳门六合彩★ 【正版图库】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                {include file="common:tk1"}
+            </div>
+        </div>
+    </div>
+</div>
+<div class="module" id="xg_zbtk">
+    <div class="module-panel">
+        <div name="Hongkong" style="">
+            <div class="module-header">
+                <h2><span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
+                    <path d="M4.02 42L46 24 4.02 6 4 20l30 4-30 4z"></path></svg>香港六合彩★ 【正版图库】★
+            </span>
+                </h2>
+            </div>
+            <div class="wrapper fn-clear" style="margin: 0;background: #fff;padding: 0 5px;">
+                {include file="common:tk2"}
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--首页广告--->
+
+
+<!--底部广告位start-->
+<div class="cgi-zl-top adFooter">
+    <!---友情链接底部-->
+    {$page['14']['content']??''}
+    {include file="common:ad2"}
+    <!---友情链接底部end--->
+</div>
+<!--底部广告位end-->
+
+<!-- 广告通知 -->
+<!---guanggaoneiyedibu--->
+{include file="common:ad3"}
+<!---guanggaoneiyedibend--->
+<!-- 广告通知 -->
+<!--qc-->
+{$page['21']['content']??''}
+<!-- 需要引用的位置 插入以下代码 开始 -->
+<!-- 如果资料站已引入jquery，就不需要引入 jquery.min.js -->
+<!-- 如果资料站已引入layer，就不需要引入 layer.js -->
+
+
+<!-- 需要引用的位置 插入以下代码 开始 -->
+<p style="text-align: center">
+    {$page['18']['content']??''}
+</p>
+<div class="fn-hr60"></div>
+<div class="fn-hr60"></div>
+<!-- 底部横幅end -->
+<!-- 底部横幅strat -->
+<script type="text/javascript">
+    function removeElement(bar2) {
+        document.getElementById(bar2).style.display = "none";
+    }
+</script>
+{notempty name="site.appxiazaitxt"}
+<div id="bar2" style="width:100%;max-width:640px;position: fixed;bottom: 115px;left: 0;right: 0;margin: 0 auto;z-index: 999;">
+
+    <i onclick="removeElement(&#39;bar2&#39;)" style="display:block;position:absolute;top: 14px;
+		left:0;height:25px;width:25px;background-image:url(./index_files/gb-f077211b.png);
+		background-size:20px 20px;background-repeat:no-repeat;background-position:50%;"></i>
+
+    <div style="height: 50px; background-color:rgba(0,0,0,.6);width: 100%;border-top: 1px solid #fff;text-align: center;
+	text-align: center; font-size:13px;font-weight:700;color:#fff;line-height: 50px;">
+
+        <a target="_blank" href="	{$site.appdown}"><span style="color: #FFFFFF;">
+			{$site.appxiazaitxt}</span> </a>
+        <a target="_blank" style="height: 40px;line-height: 40px;width:70px;text-align:left;background-color:#ec0909;
+		bottom:0;top:0;margin: auto 10px auto 10px;font-size:14px;border: none;border-radius: 5px;padding: 0;
+		color: #fff;display: inline-block;;text-align: center;" href="	{$site.appdown}">APP下载</a>
+        <p></p>
+    </div>
+</div>
+{/notempty}
+<!--浮标-->
+
+<!--浮标结束-->
+{include file="common:fubiao"}
+<!--浮标开始-->
+<!--
+<style>
+.fubiaoo {
+    display: block;
+    text-align: center;
+    width: 100px !important;
+    height: 0px !important;
+    position: fixed !important;
+    top: 290px !important;
+    right: 7px !important;
+    bottom: 0 !important;
+    left: auto !important;
+   border-radius: 50% !important;
+}
+</style>
+<span style="position:fixed;top:340px;right:10px;text-align:center;border-radius:50%;background:#FF0202;color:#FFFFFF;width:22px;font-weight:normal;height:23px;line-height:20px;z-index:999;" onclick="$('.fubiaoo').hide();$(this).hide()">x</span> <a target="_blank" href="https://www.cb4073.com" class="fubiaoo"><img src="/upload/2023/03/下载APP-2b15732b.gif" width="80%" margin-top="425px" /></a>
+-->
+<!--浮标-->
+<!-- 底部横幅end -->
+{include file="index:foot"}
+
+
+<script src="/index_files/symbol-defs.js"></script>
+<script src="/index_files/tools.js?t=3"></script>
+<script src="/index_files/libs.min.js"></script>
+<script src="/index_files/common.js"></script>
+<script src="/index_files/clipboard.min.2.js"></script>
+<script src="/index_files/layer.js"></script>
+
+<div class="modal fade bs-example-modal-sm in" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+     aria-hidden="true" style="display: none;">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-header" style="padding: 0; margin: 0px; position: relative;">
+            <p id="mydel">X</p>
+        </div>
+        <div class="modal-content" style="border-top-right-radius: 0; border-top-left-radius: 0;">
+            <div class="modal-body">
+                <h4 style="margin: auto; line-height: 150%;">恭喜您获得六合
+                    <span style="color: red; font-size: 20px; font-weight: bold;">精准资料</span>请添加微信</h4>
+                <h4 style="margin: auto; line-height: 250%;">
+                    <span style="color: red; font-size: 20px; font-weight: bold;"></span>
+                </h4>
+                <h4 style="margin: auto; line-height: 200%;">
+                    <span id="target5">
+                        <script>try {
+                            document.write(tips[index]);
+                        } catch (e) {
+                        }</script>
+                    </span>
+                </h4>
+                <h4 style="margin: auto;">★
+                    <button class="btn copy_btn" data-clipboard-action="copy" data-clipboard-target="#target5"
+                            id="copy_btn5" style="width: 128px; height: 26px">
+                        <span style="font-size: 13pt">点击复制加微信</span>
+                    </button>
+                    ★
+                </h4>
+                <h4 style="margin: auto;">免费领取精准六合资料</h4>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    getOrInitLotteryType();
+
+    Label = {
+        commentEditorPlaceholderLabel: '快捷编辑',
+        langLabel: 'zh_CN',
+        reportSuccLabel: '举报成功',
+        breezemoonLabel: '报码微博',
+        confirmRemoveLabel: "确定删除么？",
+        invalidPasswordLabel: "密码格式有误（数字及字母组合，长度 6-16）",
+        loginNameErrorLabel: "登录名称长度 1-256",
+        followLabel: "关注",
+        unfollowLabel: "取消关注",
+        symphonyLabel: "彩吧资讯三",
+        visionLabel: "下一代的社区系统，为未来而构建",
+        cmtLabel: "回帖",
+        collectLabel: "收藏",
+        uncollectLabel: "取消收藏",
+        desktopNotificationTemplateLabel: "你有 ${count} 条未读消息",
+        servePath: "",
+        staticServePath: "",
+        isLoggedIn: false,
+        funNeedLoginLabel: '登录后才能使用该功能',
+        notificationCommentedLabel: '收到的回帖',
+        notificationReplyLabel: '收到的回复',
+        notificationAtLabel: '提及我的',
+        notificationFollowingLabel: '我关注的',
+        pointLabel: '积分',
+        sameCityLabel: '同城',
+        systemLabel: '系统',
+        newFollowerLabel: '新关注者',
+        makeAsReadLabel: '标记为已读',
+        currentUserName: '',
+        currentUserId: '',
+        csrfToken: ''
+    }
+    Util.init(false)
+
+
+    var username = getCookie('userName');
+    var userId = getCookie('userId');
+    if (userId == undefined) {
+        var t = document.getElementById('nav-nolog');//选取id为nav-nolog的元素
+        if (t) {
+            t.style.display = 'inline-block';
+        }
+    } else {
+        //设置已登录
+        Label.isLoggedIn = true;
+        Label.currentUserId = userId;
+        Label.currentUserName = username;
+    }
+
+</script>
+
+<script>
+    $('#mydel').click(function () {
+        $('#myModal').css('display', 'none');
+    });
+
+    var clipboard = new ClipboardJS('.copy_btn', {
+        text: function () {
+            try {
+                return tips && tips[index];
+            } catch (e) {
+                return '';
+            }
+        },
+    });
+
+    clipboard.on('success', function (e) {
+        console.info('Action:', e.action);
+        console.info('Text:', e.text);
+        console.info('Trigger:', e.trigger);
+        e.clearSelection();
+    });
+    // clipboard.on('error', function(e) {
+    //   alert('请选择“拷贝”进行复制!');
+    // });
+
+    $('body').on('click', '.copy_btn', function () {
+        if (ClipboardJS.isSupported()) {
+            layer.open({
+                title: ['提示', 'font-size: 18px; border-bottom: 1px solid #ccc;'],
+                className: 'popup',
+                content: '微信号复制成功，前往添加好友！'
+                , btn: ['确定', '取消']
+                , yes: function (index) {
+                    layer.close(index);
+                    location.href = 'weixin://';
+                },
+            });
+        } else {
+            layer.open({
+                className: 'popup',
+                content: '浏览器版本过低，请手动复制，再前往微信再添加好友！'
+                , btn: ['确定']
+                , yes: function (index) {
+                    layer.close(index);
+                    // location.href = 'weixin://';
+                },
+            });
+        }
+    });
+
+
+    showLottery();
+</script>
+
+<img src="/" alt="" class="bigimg">
+<script src="/index_files/zoom.js"></script>
+<div class="mask"></div>
+<script>
+    $(function () {
+        new zoom('mask', 'bigimg', 'smallimg').init();
+    })
+</script>
+<script>
+    var mytoken = getCookie('isfavorite');
+    if (mytoken == undefined) {
+        if (navigator.userAgent.indexOf('UCBrowser') > -1) {
+            addCookie('isfavorite', "is", 0);
+            window.location.href = "ext:add_favorite";
+        }
+    }
+</script>
+<script>
+    //浏览器，隐藏多久后，自动刷新的代码。
+    var _shangCiShiJian = new Date(); //上次刷新时间
+    document.addEventListener("visibilitychange", function () {
+        if (document.hidden) {
+            console.log("Browser tab is hidden")
+        } else {
+            console.log("Browser tab is visible")
+            var _xianZai = new Date();//现在时间
+            var _duoChang = _xianZai.getTime() - _shangCiShiJian.getTime();
+            if (Math.abs(_duoChang) >= (10 * 60 * 1000)) { //第一数字表示分钟数 ，10表示十分钟
+                location.reload();
+            }
+        }
+    });
+</script>
+
+
+<script src="/index_files/jquery.cookie.js"></script>
+{include file="common:alert"}
+
+</body>
+</html>
